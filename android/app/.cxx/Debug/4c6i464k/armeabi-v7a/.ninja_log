@@ -1,0 +1,9 @@
+# ninja log v5
+0	8	0	/Users/awaisaslam/Documents/Practices/ReactNative/CrossPlatform/practice01/android/app/.cxx/Debug/4c6i464k/armeabi-v7a/CMakeFiles/cmake.verify_globs	89e942e1b772ef1a
+0	1110	1746792317199988278	CMakeFiles/appmodules.dir/Users/awaisaslam/Documents/Practices/ReactNative/CrossPlatform/practice01/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o	2867d6e9d376e709
+1	1241	1746792317331034105	CMakeFiles/appmodules.dir/OnLoad.cpp.o	a21b386e19386c6f
+1241	1316	1746792317409449397	/Users/awaisaslam/Documents/Practices/ReactNative/CrossPlatform/practice01/android/app/build/intermediates/cxx/Debug/4c6i464k/obj/armeabi-v7a/libappmodules.so	ba02909e50cacc48
+1	9	0	/Users/awaisaslam/Documents/Practices/ReactNative/CrossPlatform/practice01/android/app/.cxx/Debug/4c6i464k/armeabi-v7a/CMakeFiles/cmake.verify_globs	89e942e1b772ef1a
+1	8	0	/Users/awaisaslam/Documents/Practices/ReactNative/CrossPlatform/practice01/android/app/.cxx/Debug/4c6i464k/armeabi-v7a/CMakeFiles/cmake.verify_globs	89e942e1b772ef1a
+0	9	0	/Users/awaisaslam/Documents/Practices/ReactNative/CrossPlatform/practice01/android/app/.cxx/Debug/4c6i464k/armeabi-v7a/CMakeFiles/cmake.verify_globs	89e942e1b772ef1a
+1	8	0	/Users/awaisaslam/Documents/Practices/ReactNative/CrossPlatform/practice01/android/app/.cxx/Debug/4c6i464k/armeabi-v7a/CMakeFiles/cmake.verify_globs	89e942e1b772ef1a
