@@ -1,0 +1,3 @@
+/Users/awaisaslam/Documents/Practices/React/android/app/.cxx/Debug/x5c3gz1e/x86/CMakeFiles/appmodules.dir
+/Users/awaisaslam/Documents/Practices/React/android/app/.cxx/Debug/x5c3gz1e/x86/CMakeFiles/edit_cache.dir
+/Users/awaisaslam/Documents/Practices/React/android/app/.cxx/Debug/x5c3gz1e/x86/CMakeFiles/rebuild_cache.dir

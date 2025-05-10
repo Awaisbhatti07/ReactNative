@@ -1,0 +1,8 @@
+# ninja log v5
+30	82	1746877112004604399	build.ninja	63656b6e216ad9d2
+0	8	0	/Users/awaisaslam/Documents/Practices/React/android/app/.cxx/Debug/x5c3gz1e/arm64-v8a/CMakeFiles/cmake.verify_globs	bc9c6065b5ddb8ca
+3	1552	1746877027695355967	CMakeFiles/appmodules.dir/Users/awaisaslam/Documents/Practices/React/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o	4fc9737e81bf9949
+0	6	0	clean	284226177ebbab9a
+3	1706	1746877027855525147	CMakeFiles/appmodules.dir/OnLoad.cpp.o	8a46ea56e36e5a82
+1706	1844	1746877027995859496	/Users/awaisaslam/Documents/Practices/React/android/app/build/intermediates/cxx/Debug/x5c3gz1e/obj/arm64-v8a/libappmodules.so	d1795ca935dd7e38
+0	7	0	/Users/awaisaslam/Documents/Practices/React/android/app/.cxx/Debug/x5c3gz1e/arm64-v8a/CMakeFiles/cmake.verify_globs	bc9c6065b5ddb8ca
