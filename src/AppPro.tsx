@@ -1,8 +1,9 @@
 import React from "react";
-import commonStyles from './styles/commonStyles';
+import commonStyles from "./styles/commonStyles";
 
 import {
   SafeAreaView,
+  ScrollView,
   View,
   Text,
   Image,
@@ -10,116 +11,82 @@ import {
   useColorScheme,
 } from "react-native";
 import { JSX } from "react/jsx-runtime";
+import colors from "./styles/colors";
 
 function AppPro(): JSX.Element {
   const isDarkMode = useColorScheme() === "dark";
 
   return (
     <SafeAreaView style={commonStyles.safeArea}>
-      <View style={[styles.container, styles.containerOne]}>
-        <Image
-          source={require("./assets/images/react.png")}
-          style={{ width: 200, height: 200 }}
-        />
-        <Text style={isDarkMode ? styles.whiteText : styles.darkText}>
-          Hello Awais
-        </Text>
-      </View>
-      <View style={[styles.container, styles.containerTwo]}>
-        <Text style={isDarkMode ? styles.whiteText : styles.darkText}>
-          Hello Awais
-        </Text>
-      </View>
-
-      <View style={styles.hstack}>
-        <View
-          style={[
-            styles.container,
-            styles.view,
-            {
-              backgroundColor: "#FF0000",
-              flexDirection: 'column',
-              justifyContent: "center",
-            },
-          ]}
-        >
-          <Text>Item 1</Text>
-          <Text>Item 2</Text>
+      <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+        
+        <View style={{ flexDirection: "column", height: 200 }}>
+          <View style={{ flex: 1, backgroundColor: "red" }} />
+          <View style={{ flex: 2, backgroundColor: "blue" }} />
+          <View style={{ flex: 1, backgroundColor: "green" }} />
         </View>
 
         <View
           style={[
-            styles.container,
-            styles.view,
-            { backgroundColor: "blue", flexDirection: 'column' },
+            commonStyles.hStack,
+            { flex: 0, backgroundColor: colors.systemPink },
           ]}
         >
-          <Text>Item A</Text>
-          <Text>Item B</Text>
+          <Image
+            style={commonStyles.imageStyle}
+            source={require("./assets/images/react.png")}
+          />
+          <Text style={isDarkMode ? commonStyles.whiteText : commonStyles.darkText}>
+            Hello Awais
+          </Text>
         </View>
-      </View>
 
-      <View style={[styles.container, { position: "relative" }]}>
-        <View style={{ width: 100, height: 100, backgroundColor: "red" }} />
-        <View
-          style={{
-            width: 50,
-            height: 50,
-            backgroundColor: "blue",
-            position: "absolute",
-            top: 0,
-            left: 0,
-          }}
-        />
-      </View>
+        <View style={commonStyles.hStack}>
+          <View
+            style={[
+              commonStyles.view,
+              {
+                backgroundColor: "#FF0000",
+                flexDirection: "column",
+                justifyContent: "center",
+              },
+            ]}
+          >
+            <Text>Item 1</Text>
+            <Text>Item 2</Text>
+          </View>
+
+          <View
+            style={[
+              commonStyles.view,
+              { backgroundColor: "blue", flexDirection: "column" },
+            ]}
+          >
+            <Text>Item A</Text>
+            <Text>Item B</Text>
+
+            <View style={{ flex: 1 }} />
+          </View>
+        </View>
+
+        <View style={[commonStyles.container, { position: "relative" }]}>
+          <View style={{ width: 100, height: 100, backgroundColor: "red" }} />
+          <View
+            style={{
+              width: 50,
+              height: 50,
+              backgroundColor: "blue",
+              position: "absolute",
+              top: 0,
+              left: 0,
+            }}
+          />
+        </View>
+
+      </ScrollView>
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  safeArea: {
-    flex: 1,
-    backgroundColor: "#f0f0f0",
-  },
-
-  hstack: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "flex-start",
-  },
-  view: {
-    justifyContent: "center",
-    alignItems: "center",
-    width: 100,
-    height: 100,
-    marginHorizontal: 6,
-    marginVertical: 6,
-    borderRadius: 10,
-  },
-
-  container: {
-    flex: 1,
-    flexDirection: "row",
-    justifyContent: "flex-start", // Center vertically
-    alignItems: "center", // Center horizontally
-  },
-  containerOne: {
-    backgroundColor: "#FF0000", // Red
-    flex: 2, // Take up 2/3 of available space
-  },
-  containerTwo: {
-    backgroundColor: "#00FF00", // Green
-    flex: 2, // Take up 1/3 of available space
-  },
-  whiteText: {
-    color: "#ffffff",
-    fontSize: 20,
-  },
-  darkText: {
-    color: "#000000",
-    fontSize: 20,
-  },
-});
 
 export default AppPro;
 
