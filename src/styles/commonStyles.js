@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native';
-import colors from './colors';
+import { StyleSheet } from "react-native";
+import colors from "./colors";
 
 export default StyleSheet.create({
   safeArea: {
@@ -20,13 +20,13 @@ export default StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 10,
-    padding: 10
+    padding: 10,
   },
   imageStyle: {
     height: 100,
     width: 100,
     padding: 10,
-    borderRadius: 6
+    borderRadius: 6,
   },
 
   container: {
@@ -43,5 +43,31 @@ export default StyleSheet.create({
   darkText: {
     color: "#000000",
     fontSize: 20,
+  },
+
+  challengeOne: {
+    flex: 1,
+    flexDirection: "row",
+    padding: 10,
+  },
+
+  challengeTwo: {
+    flex: 1,
+    flexDirection: "row",
+    padding: 10,
+  },
+
+  challengeThree: {
+     flex: 1,
+    flexDirection: "row",
+    gap: 5,
+    padding: 10
+  },
+
+  challengeFour: {
+    flex: 1,
+    flexDirection: "row",
+    gap: 5,
+    padding: 10,
   },
 });

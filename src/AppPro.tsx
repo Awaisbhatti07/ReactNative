@@ -19,7 +19,6 @@ function AppPro(): JSX.Element {
   return (
     <SafeAreaView style={commonStyles.safeArea}>
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-        
         <View style={{ flexDirection: "column", height: 200 }}>
           <View style={{ flex: 1, backgroundColor: "red" }} />
           <View style={{ flex: 2, backgroundColor: "blue" }} />
@@ -36,7 +35,9 @@ function AppPro(): JSX.Element {
             style={commonStyles.imageStyle}
             source={require("./assets/images/react.png")}
           />
-          <Text style={isDarkMode ? commonStyles.whiteText : commonStyles.darkText}>
+          <Text
+            style={isDarkMode ? commonStyles.whiteText : commonStyles.darkText}
+          >
             Hello Awais
           </Text>
         </View>
@@ -83,6 +84,54 @@ function AppPro(): JSX.Element {
           />
         </View>
 
+        <View style={[commonStyles.challengeOne]}>
+          <View style={{ flex: 1, backgroundColor: "red" }} />
+          <View style={{ flex: 1, backgroundColor: "green" }} />
+          <View style={{ flex: 1, backgroundColor: "blue" }} />
+        </View>
+
+        <View style={[commonStyles.challengeTwo]}>
+          <View style={{ flex: 1 }} />
+          <View style={{ flex: 1, backgroundColor: "red" }} />
+          <View style={{ flex: 1, backgroundColor: "green" }} />
+          <View style={{ flex: 1, backgroundColor: "blue" }} />
+        </View>
+
+        <View style={[commonStyles.challengeThree]}>
+          <View style={{ flex: 2, backgroundColor: "red" }} />
+          <View style={{ flex: 1, backgroundColor: "green" }} />
+          <View style={{ width: 100, backgroundColor: "blue" }} />
+        </View>
+
+        <View style={[commonStyles.challengeFour]}>
+          <View
+            style={{
+              flex: 1,
+              backgroundColor: "red",
+              borderColor: "green",
+              borderWidth: 2,
+              borderRadius: 5,
+            }}
+          />
+          <View
+            style={{
+              flex: 1,
+              backgroundColor: "green",
+              borderColor: "red",
+              borderWidth: 2,
+              borderRadius: 5,
+            }}
+          />
+          <View
+            style={{
+              flex: 1,
+              backgroundColor: "blue",
+              borderColor: "green",
+              borderWidth: 2,
+              borderRadius: 5,
+            }}
+          />
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -91,49 +140,57 @@ function AppPro(): JSX.Element {
 export default AppPro;
 
 /*
-PART 1: flex, alignItems, and justifyContent in React Native
 
-By default, React Native uses flexDirection: 'column', which means:
+🧱 PART 1: flex, alignItems, and justifyContent in React Native
+React Native uses Flexbox for layout, similar to CSS, but with flexDirection: 'column' as the default.
 
-Items are laid out vertically (top to bottom).
+📏 1. flex
+flex: 1 → Makes the component expand to fill all available space in the parent.
 
--> justifyContent = controls vertical alignment
--> alignItems = controls horizontal alignment
+Equivalent to flex-grow: 1 in CSS.
 
-1- Flex
+Commonly used to fill the screen or make components share space proportionally.
 
-flex: 1 means:
+📦 2. justifyContent – Main Axis Alignment
+Controls how children are aligned along the main axis.
 
-Take up all available space in the parent (like flex-grow in CSS).
-It's most often used to fill the screen.
+Since flexDirection: 'column' by default → main axis is vertical (top to bottom).
 
-2- JustifyContent
+justifyContent: 'flex-start'   // children at the top
+justifyContent: 'center'       // children centered vertically
+justifyContent: 'flex-end'     // children at the bottom
+justifyContent: 'space-between' // equal space *between* children
+justifyContent: 'space-around'  // equal space *around* children
+justifyContent: 'space-evenly'  // equal space between and around
 
-Controls how children are aligned along the main axis:
-(Default flexDirection = 'column' → main axis = vertical)
+📐 3. alignItems – Cross Axis Alignment
+Controls alignment along the cross axis.
 
-justifyContent: 'flex-start'   // at top
-justifyContent: 'center'       // vertically centered
-justifyContent: 'flex-end'     // at bottom
-justifyContent: 'space-between'
-justifyContent: 'space-around'
-justifyContent: 'space-evenly'
+In flexDirection: 'column', cross axis = horizontal.
 
-3- AlignItems
+alignItems: 'flex-start'   // align children to the left
+alignItems: 'center'       // center children horizontally
+alignItems: 'flex-end'     // align children to the right
 
-Controls how children align along the cross axis (horizontal in column mode):
+🧲 4. alignContent (when flexWrap is enabled)
+Aligns multiple rows (or columns) in a wrapped layout.
 
-alignItems: 'flex-start'    // align left
-alignItems: 'center'        // center horizontally
-alignItems: 'flex-end'      // align right
+Has similar values to justifyContent, but applies to the overall wrapped content, not individual items.
 
-PART 2: What is the SwiftUI equivalent of ZStack, HStack, VStack 
-in React Native?
+🔀 5. flexWrap
 
-| SwiftUI Stack | React Native Equivalent                                                     |
-| ------------- | --------------------------------------------------------------------------- |
-| `VStack`      | `View` with `flexDirection: 'column'` (default)                             |
-| `HStack`      | `View` with `flexDirection: 'row'`                                          |
-| `ZStack`      | `View` with `position: 'absolute'` or using `StyleSheet.absoluteFillObject` |
+Allows items to wrap onto multiple lines (like word wrap).
+
+flexWrap: 'wrap'   // enables wrapping
+flexWrap: 'nowrap' // default; no wrapping
+
+🧱 PART 2: SwiftUI Stack vs React Native Equivalent
+
+SwiftUI	React Native Equivalent
+VStack	View with flexDirection: 'column' (default)
+HStack	View with flexDirection: 'row'
+ZStack	View with children using position: 'absolute', or StyleSheet.absoluteFillObject
+
+Tip: For layering (ZStack), combine a normal parent View with absolutely positioned children.
 
 */
