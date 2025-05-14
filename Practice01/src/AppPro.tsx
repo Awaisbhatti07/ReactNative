@@ -10,6 +10,7 @@ import {
   StyleSheet,
   useColorScheme,
 } from "react-native";
+
 import { JSX } from "react/jsx-runtime";
 import colors from "./styles/colors";
 

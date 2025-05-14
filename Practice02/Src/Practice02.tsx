@@ -1,15 +1,18 @@
 // shortcut to add below snippet in empty file rnfe
 
-import { SafeAreaView, View, Text } from "react-native";
+import { SafeAreaView, View, Text, ScrollView } from "react-native";
 import React from "react";
 import FlatCards from "../Components/FlatCards";
+import ElevatedCards from "../Components/ElevatedCards";
 
 const Practice02 = () => {
   return (
     <SafeAreaView>
       <View>
-        <Text>Practice02</Text>
-        <FlatCards />
+        <ScrollView>
+          <FlatCards />
+          <ElevatedCards />
+        </ScrollView>
       </View>
     </SafeAreaView>
   );
