@@ -4,7 +4,7 @@ import styles from "../styles/fancyStyle";
 
 export default function FancyCards() {
   return (
-    <View>
+    <View style={{ marginTop: 20 }}>
       <Text style={[styles.headingText]}>Trending Places</Text>
       <View style={[styles.card, styles.cardElevated]}>
         <Image

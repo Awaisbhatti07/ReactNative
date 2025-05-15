@@ -6,7 +6,7 @@ import React from "react";
 
 export default function FlatCards() {
   return (
-    <View>
+    <View style={{ marginTop: 20 }}>
       <Text style={styles.textStyle}>FlatCards</Text>
       <View style={styles.container}>
         <View style={[styles.flatCards, styles.card1]}>

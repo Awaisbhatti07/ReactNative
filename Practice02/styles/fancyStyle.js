@@ -19,8 +19,8 @@ export default StyleSheet.create({
       width: 1,
       height: 2,
     },
-    shadowOpacity: 0.5,
-    shadowRadius: 2,
+    shadowOpacity: 0.25,
+    shadowRadius: 5,
   },
   cardImage: {
     width: "100%",

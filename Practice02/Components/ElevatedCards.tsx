@@ -25,7 +25,7 @@ const Card = ({ label, style }: CardProps) => {
 
 export default function ElevatedCards() {
   return (
-    <View>
+    <View style={{ marginTop: 20 }}>
       <Text style={styles.textStyle}>Elevated Cards</Text>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         <View style={styles.container}>
