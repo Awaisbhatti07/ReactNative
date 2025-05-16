@@ -21,7 +21,6 @@ export default function ActionCard() {
         </View>
         <Image
           style={styles.cardImage}
-          // source={require("../../Practice01/src/assets/images/trending.jpg")}
           source={{ uri: 'https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }}
         />
         <View style={styles.bodyContainer}>
