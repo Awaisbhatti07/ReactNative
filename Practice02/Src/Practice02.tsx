@@ -6,15 +6,17 @@ import FlatCards from "../Components/FlatCards";
 import ElevatedCards from "../Components/ElevatedCards";
 import FancyCards from "../Components/FancyCard";
 import ActionCard from "../Components/ActionCard";
+import ContactList from "../Components/ContactList";
 
 const Practice02 = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ marginBottom: 50 }}>
       <View>
         <ScrollView>
           <FlatCards />
           <ElevatedCards />
           <FancyCards />
+          <ContactList />
           <ActionCard />
         </ScrollView>
       </View>
