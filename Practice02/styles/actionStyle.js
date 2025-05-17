@@ -9,7 +9,7 @@ export default StyleSheet.create({
   },
   card: {
     margin: 10,
-    borderRadius: 6
+    borderRadius: 6,
   },
   elevatedCard: {
     backgroundColor: "#E0BFB8",
@@ -24,34 +24,34 @@ export default StyleSheet.create({
   headingContainer: {
     padding: 10,
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
   },
   headerText: {
     fontSize: 16,
-    fontWeight: '600'
+    fontWeight: "600",
   },
   cardImage: {
     height: 250,
     width: "100%",
   },
   bodyContainer: {
-    padding: 10
+    padding: 10,
   },
   footerContainer: {
     paddingTop: 2,
     paddingBottom: 10,
     flexDirection: "row",
-    justifyContent: 'center',
-    gap: 20
-},
+    justifyContent: "center",
+    gap: 20,
+  },
   socialLinks: {
     fontSize: 14,
     underline: true,
-    fontWeight: '500',
-    textDecorationLine: 'underline',
-    color: '#FFFFFF',
-    backgroundColor: '#E37383',
-    padding:10,
-    borderRadius: 4
+    fontWeight: "500",
+    textDecorationLine: "underline",
+    color: "#FFFFFF",
+    backgroundColor: "#E37383",
+    padding: 10,
+    borderRadius: 4,
   },
 });

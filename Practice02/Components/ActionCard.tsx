@@ -21,7 +21,9 @@ export default function ActionCard() {
         </View>
         <Image
           style={styles.cardImage}
-          source={{ uri: 'https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }}
+          source={{
+            uri: "https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          }}
         />
         <View style={styles.bodyContainer}>
           <Text numberOfLines={4}>
@@ -31,10 +33,20 @@ export default function ActionCard() {
           </Text>
         </View>
         <View style={styles.footerContainer}>
-          <TouchableOpacity onPress={() => openWebsite('https://blog.learncodeonline.in/whats-new-in-javascript-21-es12')}>
+          <TouchableOpacity
+            onPress={() =>
+              openWebsite(
+                "https://blog.learncodeonline.in/whats-new-in-javascript-21-es12"
+              )
+            }
+          >
             <Text style={styles.socialLinks}>Read More</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => openWebsite('https://en.wikipedia.org/wiki/Cristiano_Ronaldo')}>
+          <TouchableOpacity
+            onPress={() =>
+              openWebsite("https://en.wikipedia.org/wiki/Cristiano_Ronaldo")
+            }
+          >
             <Text style={styles.socialLinks}>Follow Me</Text>
           </TouchableOpacity>
         </View>
