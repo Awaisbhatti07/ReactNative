@@ -124,6 +124,7 @@ export default function practice03() {
             validationSchema={passwordSchema} // Yup schema to validate fields
             onSubmit={(values) => {
               // Called when form is submitted and validation passes
+              console.log(values);
               generatePassword(+values.passwordLength); // '+' converts string to number
             }}
           >
