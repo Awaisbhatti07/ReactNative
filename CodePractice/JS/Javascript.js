@@ -1,0 +1,15 @@
+const printNumbers = (n) => {
+  for (let i = 1; i <= n; i++) {
+    if (i > 8) {
+      break;
+    }
+
+    if (i % 3 === 0) {
+      continue;
+    }
+
+    console.log(i);
+  }
+};
+
+printNumbers(10);

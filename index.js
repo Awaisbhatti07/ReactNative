@@ -2,12 +2,13 @@
  * @format
  */
 
-import {AppRegistry} from 'react-native';
-import App from './Practice01/src/AppPro';
-import App2 from '../ReactNative/Practice02/src/Practice02';
-import App3 from './Practice03/src/practice03'
-import App4 from './Practice04/src/practice04'
-import App5 from './Practice05/src/practice05'
-import {name as appName} from './app.json';
+import { AppRegistry } from "react-native";
+import App from "./Practice01/src/AppPro";
+import App2 from "../ReactNative/Practice02/src/Practice02";
+import App3 from "./Practice03/src/practice03";
+import App4 from "./Practice04/src/practice04";
+import App5 from "./Practice05/src/practice05";
+import App6 from "../ReactNative/Practice06/src/practice";
+import { name as appName } from "./app.json";
 
-AppRegistry.registerComponent(appName, () => App5);
+AppRegistry.registerComponent(appName, () => App6);
