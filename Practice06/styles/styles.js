@@ -2,30 +2,16 @@ import { StyleSheet } from "react-native";
 import colors from "../../Practice02/styles/colors";
 
 export default StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: colors.backgroundColor,
-    gap: 20
+  buttonContainer: {
+    alignItems: "center"
   },
-  diceContainer: {
-    margin: 12,
+  flag: {
+    fontSize: 28,
+    color: colors.systemLabelDark,
+    marginBottom: 4
   },
-  diceImage: {
-    width: 200,
-    height: 200,
-  },
-  rollDiceButtonText: {
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderWidth: 2,
-    borderRadius: 8,
-    borderColor: colors.systemPink,
-    fontSize: 16,
-    color: colors.black,
-    fontWeight: "700",
-    textTransform: "uppercase",
-    textAlign: "center",
+  country: {
+    fontSize: 14,
+    color: colors.systemPink,
   }
 });
