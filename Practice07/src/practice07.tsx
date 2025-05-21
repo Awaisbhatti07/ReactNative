@@ -36,7 +36,11 @@ export default function practice07() {
     // Each cell can be 'X', 'O', or 'empty'.
 
     // Check if the top row (cells 0, 1, 2) are all the same and not empty
-    if (
+
+    /*
+    
+    Method 1
+if (
       gameState[0] === gameState[1] &&
       gameState[0] === gameState[2] &&
       gameState[0] !== "empty"
@@ -102,6 +106,39 @@ export default function practice07() {
     // If no winner and no empty cell is left, it's a draw
     else if (!gameState.includes("empty")) {
       setGameWinner("Draw game... ⌛️");
+    }
+    */
+
+    /*
+    Method 2
+    */
+
+    let winnerFound = false;
+    const winningCombos = [
+      [0, 1, 2], // top row
+      [3, 4, 5], // middle row
+      [6, 7, 8], // bottom row
+      [0, 3, 6], // left column
+      [1, 4, 7], // middle column
+      [2, 5, 8], // right column
+      [0, 4, 8], // top-left to bottom-right diagonal
+      [2, 4, 6], // top-right to bottom-left diagonal
+    ];
+
+    for (const [a, b, c] of winningCombos) {
+      if (
+        gameState[a] !== "empty" &&
+        gameState[a] === gameState[b] &&
+        gameState[b] === gameState[c]
+      ) {
+        setGameWinner(`${gameState[a]} won the game! 🥳`);
+        winnerFound = true;
+        break;
+      }
+    }
+
+    if (!winnerFound && !gameState.includes("empty")) {
+      setGameWinner("It's a draw! 😐");
     }
   };
 
