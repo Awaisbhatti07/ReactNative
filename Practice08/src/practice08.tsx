@@ -50,7 +50,7 @@ export default function Practice08() {
   const [isPlayerReady, setIsPlayerReady] = useState(false);
 
   async function setup() {
-    debugger
+    
     const isSetup = await setupPlayer();
 
     if (isSetup) {

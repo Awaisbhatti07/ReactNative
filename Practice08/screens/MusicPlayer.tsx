@@ -1,5 +1,5 @@
 import { Dimensions, Image, Text, View, FlatList } from "react-native";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/styles";
 
 import TrackPlayer, {
@@ -21,7 +21,19 @@ export default function MusicPlayer() {
   const styles = createStyles(width);
   const [track, setTrack] = useState<Track | null>();
 
+  useEffect(() => {
+    const fetchActiveTrack = async () => {
+      const playingTrack = await TrackPlayer.getActiveTrack();
+      if (playingTrack) {
+        setTrack(playingTrack);
+      }
+    };
+
+    fetchActiveTrack();
+  }, []);
+
   useTrackPlayerEvents([Event.PlaybackActiveTrackChanged], async (event) => {
+    debugger;
     switch (event.type) {
       case Event.PlaybackActiveTrackChanged:
         const playingTrack = await TrackPlayer.getActiveTrack();
