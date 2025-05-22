@@ -5,7 +5,7 @@ import { NativeModules } from "react-native";
 export async function setupPlayer() {
   let isSetup = false;
   try {
-    await TrackPlayer.getCurrentTrack();
+    await TrackPlayer.getActiveTrack();
     isSetup = true;
   } catch (error) {
     await TrackPlayer.setupPlayer();
