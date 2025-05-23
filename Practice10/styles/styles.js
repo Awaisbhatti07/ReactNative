@@ -3,76 +3,94 @@ import colors from "../../Practice02/styles/colors";
 
 export default StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#36454F', // overall background color
-  },
-  playerInfo: {
-    height: 56,
+    alignItems: 'flex-start',
+    justifyContent: 'center',
 
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
+    padding: 12,
+    backgroundColor: '#FFFFFF',
+  },
+
+  // detail Screen Css
+  detailContainer: {
+    paddingHorizontal: 18,
+    backgroundColor: '#FFFFFF',
+  },
+  image: {
+    width: 300,
+    height: 450,
+    resizeMode: 'contain',
+  },
+  rowContainer: {
+    flexDirection: 'row',
+  },
+  name: {
+    marginBottom: 4,
+
+    fontSize: 20,
+    fontWeight: '500',
+  },
+  ratingContainer: {
+    marginVertical: 12,
+  },
+  priceContainer: {
+    paddingVertical: 12,
+    paddingHorizontal: 12,
+
+    marginBottom: 12,
+
+    borderRadius: 6,
+    backgroundColor: '#deffeb',
+  },
+  rating: {
+    marginRight: 4,
 
     borderRadius: 4,
-    paddingVertical: 8,
-    marginVertical: 12,
-    marginHorizontal: 14,
-
-    shadowOffset: {
-      width: 1,
-      height: 1,
-    },
-    shadowColor: "#333",
-    shadowOpacity: 0.2,
-    shadowRadius: 1.5,
+    paddingHorizontal: 8,
+    justifyContent: 'center',
+    backgroundColor: '#008c00',
   },
-  gameTurnTxt: {
-    fontSize: 20,
-    color: "#FFFFFF",
-    fontWeight: "600",
+  ratingText: {
+    color: '#fff',
+    fontSize: 14,
+    fontWeight: '600',
   },
-  playerX: {
-    backgroundColor: "#38CC77",
+  ratingCount: {
+    fontSize: 14,
+    color: '#878787',
   },
-  playerO: {
-    backgroundColor: "#F7CD2E",
-  },
-  grid: {
-    margin: 12,
-  },
-  card: {
-    height: 100,
-    width: "33.33%",
-
-    alignItems: "center",
-    justifyContent: "center",
-
-    borderWidth: 0.5,
-    borderColor: "#fff",
-  },
-  winnerInfo: {
-    borderRadius: 8,
-    backgroundColor: "#38CC77",
-
-    shadowOpacity: 0.1,
-  },
-  winnerTxt: {
-    fontSize: 20,
-    color: "#FFFFFF",
-    fontWeight: "600",
-    textTransform: "capitalize",
-  },
-  gameBtn: {
-    alignItems: "center",
-
-    padding: 10,
-    borderRadius: 8,
-    marginHorizontal: 36,
-    backgroundColor: "#8D3DAF",
-  },
-  gameBtnText: {
+  originalPrice: {
     fontSize: 18,
-    color: "#FFFFFF",
-    fontWeight: "500",
+    fontWeight: '600',
+    marginRight: 8,
+
+    color: 'rgba(0, 0, 0, 0.5)',
+    textDecorationLine: 'line-through',
+  },
+  discountPrice: {
+    fontSize: 18,
+    color: '#000000',
+    fontWeight: '600',
+  },
+  offerPercentage: {
+    fontSize: 17,
+    fontWeight: '600',
+    color: '#4bb550',
+
+    marginRight: 8,
+  },
+  badge: {
+    margin: 2,
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+  },
+  tagBadge: {
+    paddingVertical: 2,
+    paddingHorizontal: 4,
+
+    borderWidth: 1,
+    borderRadius: 4,
+    borderColor: 'rgba(0, 0, 0, 0.5)',
+
+    color: 'rgba(0, 0, 0, 0.8)',
   },
 });
