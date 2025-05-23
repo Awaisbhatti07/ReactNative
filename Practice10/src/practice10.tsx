@@ -1,7 +1,8 @@
-import { Text, View } from "react-native";
+import { Alert, Button, Text, View, TouchableOpacity } from "react-native";
 import React from "react";
 
 import styles from "../styles/styles";
+import Icon from "react-native-vector-icons/MaterialIcons";
 
 // Navigation
 import { NavigationContainer } from "@react-navigation/native";
@@ -28,6 +29,13 @@ export default function practice10() {
           options={{
             headerLargeTitle: true,
             headerTitle: "Trending Products",
+            headerLeft: () => (
+              <TouchableOpacity
+                onPress={() => Alert.alert("Menu pressed")}
+              >
+                <Icon name="menu" size={24} color="#000" />
+              </TouchableOpacity>
+            ),
           }}
         />
         <Stack.Screen
