@@ -10,9 +10,10 @@ import App4 from "./Practice04/src/practice04";
 import App5 from "./Practice05/src/practice05";
 import App6 from "./Practice06/src/practice06";
 import App7 from "../ReactNative/Practice07/src/practice07";
-import App8 from "../ReactNative/Practice08/src/practice08";
+import App8 from "./MusicApp/src/practice08";
+import Navigations from "./Navigations/src/Navigations";
 import { name as appName } from "./app.json";
 import {playbackService} from './musicPlayerService'
 
-AppRegistry.registerComponent(appName, () => App8);
+AppRegistry.registerComponent(appName, () => Navigations);
 TrackPlayer.registerPlaybackService(() => playbackService);

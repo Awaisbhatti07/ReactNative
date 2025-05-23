@@ -1,5 +1,5 @@
 import TrackPlayer, { Event, RepeatMode } from "react-native-track-player";
-import { playListData } from "./Practice08/src/constants";
+import { playListData } from "./MusicApp/src/constants";
 import { NativeModules } from "react-native";
 
 export async function setupPlayer() {
